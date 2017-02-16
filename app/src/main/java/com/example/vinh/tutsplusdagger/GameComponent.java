@@ -15,4 +15,6 @@ public interface GameComponent {
     GameData getNewPlayer2();
 
     String getPlayMode();
+
+    int getRandomInt();
 }

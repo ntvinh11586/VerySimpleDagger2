@@ -1,5 +1,7 @@
 package com.example.vinh.tutsplusdagger;
 
+import java.util.Random;
+
 import javax.inject.Named;
 
 import dagger.Module;
@@ -33,5 +35,12 @@ public class GameModule {
     @Provides
     String providesPlayMode() {
         return playMode;
+    }
+
+    // we can provide anything and get it from Component,
+    // not depends on the object which is injected by Component
+    @Provides
+    int providesRandomInt() {
+        return (new Random()).nextInt();
     }
 }

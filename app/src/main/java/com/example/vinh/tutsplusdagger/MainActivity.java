@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, gameComponent.getNewPlayer1().getPlayer());
         Log.d(TAG, gameComponent.getNewPlayer2().getPlayer());
         Log.d(TAG, gameComponent.getPlayMode());
+        Log.d(TAG, String.valueOf(gameComponent.getRandomInt()));
 
         Log.d(TAG, session.newPlayer1.getPlayer());
         Log.d(TAG, session.newPlayer2.getPlayer());
