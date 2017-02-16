@@ -18,13 +18,17 @@ public class MainActivity extends AppCompatActivity {
 //        Allow only GameModule() with empty params on constructor
 //        DaggerGameComponent.create().inject(session);
 
-        DaggerGameComponent.builder()
+        GameComponent gameComponent = DaggerGameComponent.builder()
                 .gameModule(new GameModule("John", "Jackie", "Hard"))
-                .build()
-                .inject(session);
+                .build();
+        gameComponent.inject(session);
+
+        Log.d(TAG, gameComponent.getNewPlayer1().getPlayer());
+        Log.d(TAG, gameComponent.getNewPlayer2().getPlayer());
+        Log.d(TAG, gameComponent.getPlayMode());
 
         Log.d(TAG, session.newPlayer1.getPlayer());
         Log.d(TAG, session.newPlayer2.getPlayer());
-        Log.d(TAG, session.gameMode);
+        Log.d(TAG, session.playMode);
     }
 }

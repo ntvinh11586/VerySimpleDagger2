@@ -14,5 +14,5 @@ public class GameSession {
     public GameData newPlayer2;
 
     @Inject
-    public String gameMode;
+    public String playMode;
 }
