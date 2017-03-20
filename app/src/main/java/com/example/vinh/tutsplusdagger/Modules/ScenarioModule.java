@@ -1,7 +1,5 @@
 package com.example.vinh.tutsplusdagger.Modules;
 
-import com.example.vinh.tutsplusdagger.Models.Scenario;
-
 import java.util.Date;
 
 import javax.inject.Named;
@@ -17,11 +15,6 @@ public class ScenarioModule {
     public ScenarioModule(String name, Date date) {
         this.name = name;
         this.date = date;
-    }
-
-    @Provides
-    Scenario providesScenario() {
-        return new Scenario(name, date);
     }
 
     @Provides

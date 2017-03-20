@@ -27,13 +27,10 @@ public class MainActivity extends AppCompatActivity {
         // DaggerGameComponent.create().inject(session);
         GameComponent gameComponent = DaggerGameComponent.builder()
                 .gameModule(new GameModule("John", "Jackie", "Hard"))
-                .build();
-        gameComponent.inject(session);
-
-        ScenarioComponent scenarioComponent = DaggerScenarioComponent.builder()
                 .scenarioModule(new ScenarioModule("Scenario", new Date()))
                 .build();
-        scenarioComponent.inject(scenario);
+        gameComponent.injectGameSession(session);
+        gameComponent.injectScenario(scenario);
 
         Log.d(TAG, gameComponent.getNewPlayer1().getPlayer());
         Log.d(TAG, gameComponent.getNewPlayer2().getPlayer());
