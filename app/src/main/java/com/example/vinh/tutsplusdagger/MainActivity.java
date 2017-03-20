@@ -15,9 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
         GameSession session = new GameSession();
 
-//        Allow only GameModule() with empty params on constructor
-//        DaggerGameComponent.create().inject(session);
-
+        // Allow only GameModule() with empty params on constructor
+        // DaggerGameComponent.create().inject(session);
         GameComponent gameComponent = DaggerGameComponent.builder()
                 .gameModule(new GameModule("John", "Jackie", "Hard"))
                 .build();

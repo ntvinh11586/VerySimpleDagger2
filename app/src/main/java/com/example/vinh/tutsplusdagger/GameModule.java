@@ -21,13 +21,15 @@ public class GameModule {
     }
 
     // Enhance example with multiple same type data
-    @Provides @Named("newPlayer1")
+    @Provides
+    @Named("newPlayer1")
     GameData providesNewPlayer1() {
         return new GameData(newPlayer1);
     }
 
     // Enhance example with multiple same type data
-    @Provides @Named("newPlayer2")
+    @Provides
+    @Named("newPlayer2")
     GameData providesNewPlayer2() {
         return new GameData(newPlayer2);
     }
