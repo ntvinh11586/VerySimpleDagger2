@@ -1,4 +1,6 @@
-package com.example.vinh.tutsplusdagger;
+package com.example.vinh.tutsplusdagger.Modules;
+
+import com.example.vinh.tutsplusdagger.Models.GameData;
 
 import java.util.Random;
 
@@ -35,6 +37,7 @@ public class GameModule {
     }
 
     @Provides
+    @Named("playMode")
     String providesPlayMode() {
         return playMode;
     }

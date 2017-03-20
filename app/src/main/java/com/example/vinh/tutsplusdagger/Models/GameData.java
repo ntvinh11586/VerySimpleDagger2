@@ -1,9 +1,9 @@
-package com.example.vinh.tutsplusdagger;
+package com.example.vinh.tutsplusdagger.Models;
 
 public class GameData {
     private String player;
 
-    GameData(String player) {
+    public GameData(String player) {
         this.player = player;
     }
 

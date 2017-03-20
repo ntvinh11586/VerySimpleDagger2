@@ -1,10 +1,14 @@
 package com.example.vinh.tutsplusdagger;
 
+import com.example.vinh.tutsplusdagger.Models.GameData;
+import com.example.vinh.tutsplusdagger.Models.GameSession;
+import com.example.vinh.tutsplusdagger.Modules.GameModule;
+
 import javax.inject.Named;
 
 import dagger.Component;
 
-@Component(modules = GameModule.class)
+@Component(modules = {GameModule.class})
 public interface GameComponent {
     void inject(GameSession obj);
 
@@ -14,6 +18,7 @@ public interface GameComponent {
     @Named("newPlayer2")
     GameData getNewPlayer2();
 
+    @Named("playMode")
     String getPlayMode();
 
     int getRandomInt();
